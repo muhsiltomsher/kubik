@@ -1,0 +1,105 @@
+<section id="about-us-year-sec" class="bg-black text-white border-b border-gray-800 overflow-hidden">
+    {{-- Content Block First --}}
+    <x-container>
+        <div class="since-content grid md:grid-cols-2 gap-8 py-[200px]" data-fade="true">
+            <div>
+                <p class="uppercase text-sm text-primary tracking-widest mb-4">About Kubik Construction</p>
+                <h3 class="text-3xl md:text-4xl font-silk-serif font-semibold leading-snug mb-6 text-white">
+                    Building spaces with precision, integrity, and craftsmanship that stands the test of time.
+                </h3>
+            </div>
+            <div class="text-gray-300 space-y-6">
+                <div class="grid sm:grid-cols-2 gap-6">
+                    <ul class="list-disc list-inside space-y-1 font-medium text-white">
+                        <li>Residential Construction</li>
+                        <li>Commercial Fit-outs</li>
+                        <li>Turnkey Project Delivery</li>
+                    </ul>
+                    <div class="text-sm leading-relaxed text-white/80">
+                        Kubik Construction is a South West London-based firm delivering premium construction and property solutions for homes and businesses. We provide full-service project management with a commitment to quality and efficiency.
+                    </div>
+                </div>
+                <p class="text-sm leading-relaxed text-white/70">
+                    Our experienced team works collaboratively with private clients, architects, and designers to deliver projects with exceptional detail and care. From bespoke renovations to large-scale developments, Kubik ensures every finish is flawless.
+                </p>
+                <a href="#services" class="inline-block mt-4 px-6 py-2 bg-primary text-black text-sm rounded-full hover:bg-primary/90 transition">
+                    Explore Our Services
+                </a>
+            </div>
+        </div>
+    </x-container>
+
+    {{-- Fullscreen Image + SINCE 2005 Heading --}}
+    <div id="since-year" class="relative flex justify-center items-center min-h-screen overflow-hidden">
+        {{-- Background Image --}}
+        <img
+            src="{{ asset('images/bg-cta-2.jpg') }}"
+            alt="Background"
+            class="since-bg absolute inset-0 w-full h-full object-cover z-0 will-change-transform" />
+
+        {{-- Overlay --}}
+        <div class="absolute inset-0 bg-black bg-opacity-50 z-0"></div>
+
+        {{-- Animated Typing Heading --}}
+        <h2 id="since-heading" class="relative z-10 text-[60px] sm:text-[100px] md:text-[120px] font-black leading-none tracking-tight text-primary text-center">
+            SINCE 2005
+        </h2>
+    </div>
+</section>
+
+@push('scripts')
+<script type="module">
+    // import gsap from 'gsap';
+    // import { ScrollTrigger } from 'gsap/ScrollTrigger';
+    import SplitType from 'https://cdn.jsdelivr.net/npm/split-type@0.3.4/+esm';
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    document.addEventListener('DOMContentLoaded', () => {
+        // Fade-up content
+        gsap.from('[data-fade]', {
+            opacity: 0,
+            y: 60,
+            duration: 1,
+            ease: 'power2.out',
+            scrollTrigger: {
+                trigger: '[data-fade]',
+                start: 'top 85%',
+                toggleActions: 'play none none reverse',
+            }
+        });
+
+        // Parallax + zoom for background image
+        gsap.fromTo('.since-bg',
+            { scale: 1.2, y: -50 },
+            {
+                scale: 1,
+                y: 0,
+                ease: 'none',
+                scrollTrigger: {
+                    trigger: '#since-year',
+                    start: 'top bottom',
+                    end: 'bottom top',
+                    scrub: true
+                }
+            }
+        );
+
+        // Typing/char-by-char effect for heading
+        const split = new SplitType('#since-heading', { types: 'chars' });
+
+        gsap.from(split.chars, {
+            opacity: 0,
+            y: 40,
+            duration: 1,
+            stagger: 0.08,
+            ease: 'power3.out',
+            scrollTrigger: {
+                trigger: '#since-year',
+                start: 'top 80%',
+                toggleActions: 'play none none reverse'
+            }
+        });
+    });
+</script>
+@endpush
