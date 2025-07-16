@@ -36,6 +36,56 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
+
+
+
+
+window.addEventListener('DOMContentLoaded', () => {
+    const section = document.querySelector('#since-year1');
+    const image = section?.querySelector('.since-width-image1');
+    const heading = section?.querySelector('#since-heading1');
+
+    // Smooth scroll-based width expansion (scroll down = expand, up = shrink)
+    if (image) {
+        gsap.fromTo(image,
+            { width: '0%' },
+            {
+                width: '100%',
+                ease: 'none',
+                scrollTrigger: {
+                    trigger: section,
+                    start: 'top bottom',
+                    end: 'bottom top',
+                    scrub: true
+                }
+            }
+        );
+    }
+
+    // Split and animate heading (reversible on scroll)
+    if (heading) {
+        const split = new SplitType(heading, { types: 'chars' });
+
+        gsap.from(split.chars, {
+            opacity: 0,
+            y: 40,
+            duration: 1,
+            stagger: 0.08,
+            ease: 'power3.out',
+            scrollTrigger: {
+                trigger: heading,
+                start: 'top 80%',
+                end: 'bottom 20%',
+                toggleActions: 'play reverse play reverse'
+            }
+        });
+    }
+});
+
+
+
+
+
 // Alpine.js
 import Alpine from 'alpinejs';
 window.Alpine = Alpine;
@@ -855,3 +905,12 @@ gsap.from(storySplit.chars, {
         toggleActions: 'play none none reverse'
     }
 });
+
+
+
+
+
+
+
+
+

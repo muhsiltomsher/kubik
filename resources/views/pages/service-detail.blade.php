@@ -15,9 +15,9 @@
   <x-container>
     <div class="grid grid-cols-1 gap-12">
 
-      <!-- Left Intro -->
+      <!-- Intro Block -->
       <div class="relative grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-        <!-- Text Content -->
+        <!-- Left Text -->
         <div>
           <p class="text-sm uppercase text-primary tracking-widest mb-4">Services</p>
           <h2 class="text-5xl font-bold leading-[45px] mb-6 text-primary">
@@ -29,7 +29,7 @@
           </p>
         </div>
 
-        <!-- Decorative Image -->
+        <!-- Right Image -->
         <div class="hidden md:block">
           <div class="relative w-full h-[400px] overflow-hidden rounded shadow-lg">
             <img 
@@ -41,7 +41,7 @@
         </div>
       </div>
 
-      <!-- Right List -->
+      <!-- Service List -->
       <div class="divide-y divide-white/10">
         @php
           $services = [
@@ -86,17 +86,20 @@
 
         @foreach($services as $service)
         <div class="group flex justify-between items-center gap-6 py-6 transition-all duration-300 ease-in-out">
-          <div class="flex flex-col gap-1">
+          <div class="flex flex-col gap-2">
             <span class="text-secondary text-sm font-mono">({{ $service['id'] }})</span>
-            <h3 class="text-2xl font-semibold text-white group-hover:text-primary">{{ $service['title'] }}</h3>
-            <p class="text-white/60 text-sm max-w-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <h3 class="text-2xl font-semibold text-white">{{ $service['title'] }}</h3>
+            <p class="text-white/60 text-sm max-w-2xl">
               {{ $service['desc'] }}
             </p>
           </div>
           @if($service['image'])
-          <div class="overflow-hidden rounded-md hidden md:block transition-all duration-500 ease-in-out group-hover:w-90 group-hover:h-60 w-70 h-36">
-            <img src="{{ asset($service['image']) }}" alt="{{ $service['title'] }}"
-                 class="h-full w-full object-cover transition-transform duration-500 ease-in-out transform group-hover:scale-100" />
+          <div class="overflow-hidden rounded-md hidden md:block transition-all duration-500 ease-in-out w-70 h-36 group-hover:w-90 group-hover:h-60">
+            <img 
+              src="{{ asset($service['image']) }}" 
+              alt="{{ $service['title'] }}"
+              class="h-full w-full object-cover transition-transform duration-500 ease-in-out transform group-hover:scale-100"
+            />
           </div>
           @endif
         </div>
@@ -107,7 +110,7 @@
   </x-container>
 </section>
 
-{{-- Call to Action (CTA) --}}
+{{-- Call to Action --}}
 @include('sections.form-cta')
 
 @endsection

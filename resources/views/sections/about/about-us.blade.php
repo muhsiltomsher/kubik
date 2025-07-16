@@ -1,5 +1,4 @@
 <section id="about-us-year-sec" class="bg-black text-white border-b border-gray-800 overflow-hidden">
-    {{-- Content Block First --}}
     <x-container>
         <div class="since-content grid md:grid-cols-2 gap-8 py-[200px]" data-fade="true">
             <div>
@@ -29,77 +28,19 @@
         </div>
     </x-container>
 
-    {{-- Fullscreen Image + SINCE 2005 Heading --}}
-    <div id="since-year" class="relative flex justify-center items-center min-h-screen overflow-hidden">
-        {{-- Background Image --}}
-        <img
-            src="{{ asset('images/bg-cta-2.jpg') }}"
-            alt="Background"
-            class="since-bg absolute inset-0 w-full h-full object-cover z-0 will-change-transform" />
+    <div id="since-year1" class="relative flex justify-center items-center min-h-screen overflow-hidden">
+        <div class="since-image-container absolute inset-0 z-0 overflow-hidden">
+            <img
+                src="{{ asset('images/bg-cta-2.jpg') }}"
+                alt="Background"
+                class="since-width-image1 h-full object-cover will-change-transform"
+                style="width: 0%;" />
+        </div>
 
-        {{-- Overlay --}}
-        <div class="absolute inset-0 bg-black bg-opacity-50 z-0"></div>
+        <div class="absolute inset-0 bg-black bg-opacity-20 z-10"></div>
 
-        {{-- Animated Typing Heading --}}
-        <h2 id="since-heading" class="relative z-10 text-[60px] sm:text-[100px] md:text-[120px] font-black leading-none tracking-tight text-primary text-center">
+        <h2 id="since-heading1" class="relative z-20 text-[60px] sm:text-[100px] md:text-[120px] font-black leading-none tracking-tight text-primary text-center">
             SINCE 2005
         </h2>
     </div>
 </section>
-
-@push('scripts')
-<script type="module">
-    // import gsap from 'gsap';
-    // import { ScrollTrigger } from 'gsap/ScrollTrigger';
-    import SplitType from 'https://cdn.jsdelivr.net/npm/split-type@0.3.4/+esm';
-
-    gsap.registerPlugin(ScrollTrigger);
-
-    document.addEventListener('DOMContentLoaded', () => {
-        // Fade-up content
-        gsap.from('[data-fade]', {
-            opacity: 0,
-            y: 60,
-            duration: 1,
-            ease: 'power2.out',
-            scrollTrigger: {
-                trigger: '[data-fade]',
-                start: 'top 85%',
-                toggleActions: 'play none none reverse',
-            }
-        });
-
-        // Parallax + zoom for background image
-        gsap.fromTo('.since-bg',
-            { scale: 1.2, y: -50 },
-            {
-                scale: 1,
-                y: 0,
-                ease: 'none',
-                scrollTrigger: {
-                    trigger: '#since-year',
-                    start: 'top bottom',
-                    end: 'bottom top',
-                    scrub: true
-                }
-            }
-        );
-
-        // Typing/char-by-char effect for heading
-        const split = new SplitType('#since-heading', { types: 'chars' });
-
-        gsap.from(split.chars, {
-            opacity: 0,
-            y: 40,
-            duration: 1,
-            stagger: 0.08,
-            ease: 'power3.out',
-            scrollTrigger: {
-                trigger: '#since-year',
-                start: 'top 80%',
-                toggleActions: 'play none none reverse'
-            }
-        });
-    });
-</script>
-@endpush

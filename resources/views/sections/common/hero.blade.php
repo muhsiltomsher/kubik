@@ -10,7 +10,7 @@
     />
 
     {{-- Overlay --}}
-    <div class="absolute inset-0 bg-black bg-opacity-50 z-0"></div>
+    <div class="absolute inset-0 bg-black bg-opacity-20 z-0"></div>
 
     {{-- Content --}}
     <div class="relative z-10 text-center px-4">
