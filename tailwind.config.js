@@ -16,8 +16,8 @@ export default {
     theme: {
         extend: {
             fontFamily: {
-                'silk-serif': ['"Silk Serif TRIAL"', 'serif'],
-                'sora': ['Sora', 'sans-serif'],
+                sans: ['"Helvetica Neue"', 'Helvetica', 'Arial', 'sans-serif'],
+
             },
             colors: {
                 primary: '#F8B26A',

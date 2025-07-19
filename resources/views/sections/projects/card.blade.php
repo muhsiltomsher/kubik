@@ -1,27 +1,26 @@
-<div class="group relative overflow-hidden">
-    <div class="relative rounded-lg overflow-hidden">
-        <img src="{{ asset('images/projects/' . $project['image']) }}"
-             alt="{{ $project['title'] }}"
-             class="w-full h-auto object-cover transform group-hover:scale-105 transition duration-700" />
+<a href="{{ route('projects.show', ['slug' => $project['slug'] ?? '']) }}"
+   class="group block relative overflow-hidden rounded-lg border border-primary/10 hover:border-primary/50 transition-all duration-500 p-2">
 
-        <a href="{{ route('projects.show', ['slug' => $project['slug']]) }}"
-           class="absolute inset-0 z-10 flex items-center justify-center opacity-0 group-hover:opacity-100 bg-black/30 transition duration-500 ease-in-out">
-            <span class="bg-white text-black px-6 py-2 rounded-full text-sm font-semibold">
-                View Project
-            </span>
-        </a>
+    {{-- Project Image --}}
+    <div class="relative overflow-hidden rounded-lg">
+        <img src="{{ asset('images/projects/' . ($project['image'] ?? 'placeholder.jpg')) }}"
+             alt="{{ $project['title'] ?? 'Project Image' }}"
+             class="w-full h-[300px] object-cover transform transition-transform duration-700 group-hover:scale-105" />
+        <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition duration-500 ease-in-out z-10"></div>
     </div>
 
+    {{-- Project Details --}}
     <div class="flex flex-col md:flex-row items-start gap-4 mt-6">
-        <div class="text-3xl text-[#C5A26B] font-silk-serif font-medium min-w-[50px]">{{ $project['id'] }}</div>
+        <div class="text-3xl text-[#C5A26B] font-sans font-medium min-w-[50px]">
+            {{ str_pad($project['id'] ?? '0', 2, '0', STR_PAD_LEFT) }}
+        </div>
         <div>
-            <a href="{{ route('projects.show', ['slug' => $project['slug']]) }}"
-               class="text-lg md:text-2xl uppercase font-silk-serif font-semibold leading-snug text-white hover:text-[#C5A26B] transition">
-                {{ $project['title'] }}
-            </a>
-            <p class="mt-2 text-sm text-white/70 leading-relaxed max-w-xl">
-                {{ $project['desc'] }}
+            <div class="text-lg md:text-2xl uppercase font-sans font-light leading-snug text-white group-hover:text-[#C5A26B] transition-colors duration-300">
+                {{ $project['title'] ?? 'Untitled Project' }}
+            </div>
+            <p class="mt-2 text-sm text-white/70 leading-relaxed max-w-xl font-light">
+                {{ $project['desc'] ?? '' }}
             </p>
         </div>
     </div>
-</div>
+</a>

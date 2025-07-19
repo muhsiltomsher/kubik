@@ -2,8 +2,8 @@
     <x-container>
         {{-- Section Title --}}
         <div class="text-center mb-16 fade-top">
-            <p class="text-xs uppercase tracking-widest text-primary mb-3">Who We Work With</p>
-            <h2 class="text-3xl md:text-5xl font-silk-serif font-medium leading-tight text-white">
+            <p class="text-xs uppercase tracking-widest text-primary mb-3 font-light">Who We Work With</p>
+            <h2 class="text-3xl md:text-5xl font-sans font-light leading-tight text-white">
                 Collaborating with visionaries to shape exceptional spaces.
             </h2>
         </div>
@@ -21,22 +21,25 @@
 
             @foreach ($stats as $stat)
                 <div class="bg-[#151515] py-6 px-6 rounded-lg fade-top border border-white/5 hover:border-primary transition duration-300">
-                    <p class="text-sm text-white/50 mb-1">{{ $stat['label'] }}</p>
-                    <h3 class="text-2xl md:text-3xl font-bold text-primary mb-2">{{ $stat['value'] }}</h3>
-                    <p class="text-xs text-white/70 leading-snug">{{ $stat['desc'] }}</p>
+                    <p class="text-sm text-white/50 mb-1 font-light">{{ $stat['label'] }}</p>
+                    <h3 class="text-2xl md:text-3xl text-primary mb-2 font-light">{{ $stat['value'] }}</h3>
+                    <p class="text-xs text-white/70 leading-snug font-light">{{ $stat['desc'] }}</p>
                 </div>
             @endforeach
         </div>
 
         {{-- Brand Logos --}}
         <div class="text-center mb-10 fade-top">
-            <p class="text-sm text-white/60">We proudly collaborate with visionary clients, brands, and design partners.</p>
+            <p class="text-sm text-white/60 font-light">
+                We proudly collaborate with visionary clients, brands, and design partners.
+            </p>
         </div>
 
         <div class="flex flex-wrap justify-center items-center gap-6 fade-top">
             @for ($i = 1; $i <= 10; $i++)
                 <div class="bg-[#151515] px-6 py-4 rounded-full flex items-center justify-center h-[60px] w-[120px] hover:border-primary border border-white/5 transition">
-                    <img src="{{ asset('images/clients/' . $i . '.webp') }}" alt="Client {{ $i }}"
+                    <img src="{{ asset('images/clients/' . $i . '.webp') }}"
+                         alt="Client {{ $i }}"
                          class="h-6 object-contain grayscale hover:grayscale-0 transition duration-300 ease-in-out" />
                 </div>
             @endfor

@@ -12,15 +12,16 @@
 
     <!-- Hero Content -->
     <div class="relative z-30 flex flex-col justify-center items-center h-full text-white text-center px-4">
-        <h1 id="intro-title" class="font-silk-serif font-medium text-6xl sm:text-7xl md:text-8xl tracking-[.3em] opacity-0">
-            KUBIK
-        </h1>
-        <p id="intro-subtitle" class="font-silk-serif font-medium text-2xl sm:text-3xl md:text-4xl mt-4 opacity-0">
-            The Art of Building
-        </p>
-        <p id="intro-tagline" class="font-silk-serif font-medium text-base sm:text-lg md:text-xl uppercase tracking-wide mt-2 opacity-0">
-            Excellence in London
-        </p>
+<h1 id="intro-title" class="font-sans font-light text-6xl sm:text-7xl md:text-8xl tracking-[.3em]">
+    KUBIK
+</h1>
+<p id="intro-subtitle" class="font-sans font-medium text-2xl sm:text-3xl md:text-4xl mt-4">
+    The Art of Building
+</p>
+<p id="intro-tagline" class="font-sans font-medium text-base sm:text-lg md:text-xl uppercase tracking-wide mt-2">
+    Excellence in London
+</p>
+
     </div>
 </section>
 

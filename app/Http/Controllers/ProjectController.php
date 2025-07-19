@@ -12,44 +12,27 @@ class ProjectController extends Controller
     {
         // Base project data
         $this->projects = [
-
-
-            
-
-'mount-street' => [
-    'title' => 'Mount Street',
-    'subtitle' => 'A showcase of precision, craftsmanship, and enduring design.',
-    'hero' => 'images/projects/pdt-1.jpg',
-    'feature' => 'images/projects/pdt-1.jpg',
-    'description' => [
-        'Mount Street is a premium residential renovation located in Mayfair, London.',
-        'Kubik Construction oversaw every detail — modern elegance meets heritage authenticity.',
-    ],
-    'gallery' => [
-        'images/projects/pdt-1.jpg',
-        'images/projects/pdt-2.jpg',
-        'images/projects/pdt-3.jpg',
-        'images/projects/pdt-4.jpg',
-        'images/projects/pdt-5.jpg',
-        'images/projects/pdt-6.jpg',
-        'images/projects/pdt-7.jpg',
-        'images/projects/pdt-8.jpg',
-        'images/projects/pdt-9.jpg',
-        'images/projects/pdt-10.jpg',
-        'images/projects/pdt-11.jpg',
-    ],
-    'stats' => [
-        ['label' => 'Weeks Completion', 'value' => '6'],
-        ['label' => 'Square Feet', 'value' => '3,500'],
-        ['label' => 'Client Satisfaction', 'value' => '100%'],
-        ['label' => 'Snag List Items', 'value' => 'Zero'],
-    ],
-    'image' => 'pdt-1.jpg', // Thumbnail used on listing cards
-    'type' => 'completed',
-],
-
-
-
+            'mount-street' => [
+                'title' => 'Mount Street',
+                'subtitle' => 'A showcase of precision, craftsmanship, and enduring design.',
+                'hero' => 'images/projects/pdt-1.jpg',
+                'feature' => 'images/projects/pdt-1.jpg',
+                'description' => [
+                    'Mount Street is a premium residential renovation located in Mayfair, London.',
+                    'Kubik Construction oversaw every detail — modern elegance meets heritage authenticity.',
+                ],
+                'gallery' => [],
+                'stats' => [
+                    ['label' => 'Weeks Completion', 'value' => '6'],
+                    ['label' => 'Square Feet', 'value' => '3,500'],
+                    ['label' => 'Client Satisfaction', 'value' => '100%'],
+                    ['label' => 'Snag List Items', 'value' => 'Zero'],
+                ],
+                'image' => 'pdt-1.jpg',
+                'project_type' => 'completed', // Internal type for filtering (completed/upcoming)
+                'type' => 'Residential',
+                'place' => 'London, UK',
+            ],
             'ferncroft-avenue-house-1' => [
                 'title' => 'Ferncroft Avenue – House 1',
                 'subtitle' => 'Bright finishes and seamless modern comfort.',
@@ -59,19 +42,7 @@ class ProjectController extends Controller
                     'A refined transformation of a detached family home.',
                     'Features custom joinery, natural stone, and modern architecture.'
                 ],
-                    'gallery' => [
-        'images/projects/pdt-1.jpg',
-        'images/projects/pdt-2.jpg',
-        'images/projects/pdt-3.jpg',
-        'images/projects/pdt-4.jpg',
-        'images/projects/pdt-5.jpg',
-        'images/projects/pdt-6.jpg',
-        'images/projects/pdt-7.jpg',
-        'images/projects/pdt-8.jpg',
-        'images/projects/pdt-9.jpg',
-        'images/projects/pdt-10.jpg',
-        'images/projects/pdt-11.jpg',
-    ],
+                'gallery' => [],
                 'stats' => [
                     ['label' => 'Weeks Completion', 'value' => '8'],
                     ['label' => 'Square Feet', 'value' => '4,200'],
@@ -79,9 +50,10 @@ class ProjectController extends Controller
                     ['label' => 'Snag List Items', 'value' => '2'],
                 ],
                 'image' => 'project-2.jpg',
-                'type' => 'completed',
+                'project_type' => 'completed',
+                'type' => 'Residential',
+                'place' => 'London, UK',
             ],
-
             'eccleston-square' => [
                 'title' => 'Eccleston Square',
                 'subtitle' => 'Victorian aesthetic with modern elegance.',
@@ -91,19 +63,7 @@ class ProjectController extends Controller
                     'Grade II listed full renovation in Belgravia.',
                     'Custom interiors, curated finishes and modern lighting.'
                 ],
-                    'gallery' => [
-        'images/projects/pdt-1.jpg',
-        'images/projects/pdt-2.jpg',
-        'images/projects/pdt-3.jpg',
-        'images/projects/pdt-4.jpg',
-        'images/projects/pdt-5.jpg',
-        'images/projects/pdt-6.jpg',
-        'images/projects/pdt-7.jpg',
-        'images/projects/pdt-8.jpg',
-        'images/projects/pdt-9.jpg',
-        'images/projects/pdt-10.jpg',
-        'images/projects/pdt-11.jpg',
-    ],
+                'gallery' => [],
                 'stats' => [
                     ['label' => 'Weeks Completion', 'value' => '10'],
                     ['label' => 'Square Feet', 'value' => '3,000'],
@@ -111,9 +71,10 @@ class ProjectController extends Controller
                     ['label' => 'Snag List Items', 'value' => 'Few'],
                 ],
                 'image' => 'project-3.jpg',
-                'type' => 'completed',
+                'project_type' => 'completed',
+                'type' => 'Residential',
+                'place' => 'London, UK',
             ],
-
             'ellerby-street' => [
                 'title' => 'Ellerby Street',
                 'subtitle' => 'Light-filled layout optimized for family living.',
@@ -123,19 +84,7 @@ class ProjectController extends Controller
                     'The project adds a basement, rear extension, and loft.',
                     'Premium construction quality and bespoke finishes throughout.'
                 ],
-                    'gallery' => [
-        'images/projects/pdt-1.jpg',
-        'images/projects/pdt-2.jpg',
-        'images/projects/pdt-3.jpg',
-        'images/projects/pdt-4.jpg',
-        'images/projects/pdt-5.jpg',
-        'images/projects/pdt-6.jpg',
-        'images/projects/pdt-7.jpg',
-        'images/projects/pdt-8.jpg',
-        'images/projects/pdt-9.jpg',
-        'images/projects/pdt-10.jpg',
-        'images/projects/pdt-11.jpg',
-    ],
+                'gallery' => [],
                 'stats' => [
                     ['label' => 'Weeks Completion', 'value' => '12'],
                     ['label' => 'Square Feet', 'value' => '3,600'],
@@ -143,9 +92,10 @@ class ProjectController extends Controller
                     ['label' => 'Snag List Items', 'value' => '1'],
                 ],
                 'image' => 'project-4.jpg',
-                'type' => 'completed',
+                'project_type' => 'completed',
+                'type' => 'Residential',
+                'place' => 'London, UK',
             ],
-
             'cadogan-gardens' => [
                 'title' => 'Cadogan Gardens',
                 'subtitle' => 'Edwardian charm meets modern sophistication.',
@@ -155,19 +105,7 @@ class ProjectController extends Controller
                     'Restoration project using stone, plaster, and warmth.',
                     'Fusion of history and handcrafted modern elegance.'
                 ],
-                    'gallery' => [
-        'images/projects/pdt-1.jpg',
-        'images/projects/pdt-2.jpg',
-        'images/projects/pdt-3.jpg',
-        'images/projects/pdt-4.jpg',
-        'images/projects/pdt-5.jpg',
-        'images/projects/pdt-6.jpg',
-        'images/projects/pdt-7.jpg',
-        'images/projects/pdt-8.jpg',
-        'images/projects/pdt-9.jpg',
-        'images/projects/pdt-10.jpg',
-        'images/projects/pdt-11.jpg',
-    ],
+                'gallery' => [],
                 'stats' => [
                     ['label' => 'Weeks Completion', 'value' => '14'],
                     ['label' => 'Square Feet', 'value' => '4,500'],
@@ -175,10 +113,10 @@ class ProjectController extends Controller
                     ['label' => 'Snag List Items', 'value' => 'Zero'],
                 ],
                 'image' => 'project-10.jpg',
-                'type' => 'completed',
+                'project_type' => 'completed',
+                'type' => 'Residential',
+                'place' => 'London, UK',
             ],
-
-            // Upcoming Projects
             'nutley-terrace-2' => [
                 'title' => 'Nutley Terrace – 2',
                 'subtitle' => 'Contemporary sustainability in Belsize Park.',
@@ -188,28 +126,17 @@ class ProjectController extends Controller
                     'Eco-friendly smart home with clean, minimal design.',
                     'Built with zero-carbon goals and future-ready features.'
                 ],
-                    'gallery' => [
-        'images/projects/pdt-1.jpg',
-        'images/projects/pdt-2.jpg',
-        'images/projects/pdt-3.jpg',
-        'images/projects/pdt-4.jpg',
-        'images/projects/pdt-5.jpg',
-        'images/projects/pdt-6.jpg',
-        'images/projects/pdt-7.jpg',
-        'images/projects/pdt-8.jpg',
-        'images/projects/pdt-9.jpg',
-        'images/projects/pdt-10.jpg',
-        'images/projects/pdt-11.jpg',
-    ],
+                'gallery' => [],
                 'stats' => [
                     ['label' => 'Estimated Completion', 'value' => 'Q1 2026'],
                     ['label' => 'Square Feet', 'value' => '3,200'],
                     ['label' => 'Status', 'value' => 'In Progress'],
                 ],
                 'image' => 'project-2.jpg',
-                'type' => 'upcoming',
+                'project_type' => 'upcoming',
+                'type' => 'Residential',
+                'place' => 'London, UK',
             ],
-
             'ferncroft-avenue-house-5' => [
                 'title' => 'Ferncroft Avenue – House 5',
                 'subtitle' => 'Sister to House 1 with bold geometry and elegance.',
@@ -219,28 +146,17 @@ class ProjectController extends Controller
                     'Custom brass finishes, walnut cabinetry, and large atrium.',
                     'Designed for light, warmth, and family functionality.'
                 ],
-                    'gallery' => [
-        'images/projects/pdt-1.jpg',
-        'images/projects/pdt-2.jpg',
-        'images/projects/pdt-3.jpg',
-        'images/projects/pdt-4.jpg',
-        'images/projects/pdt-5.jpg',
-        'images/projects/pdt-6.jpg',
-        'images/projects/pdt-7.jpg',
-        'images/projects/pdt-8.jpg',
-        'images/projects/pdt-9.jpg',
-        'images/projects/pdt-10.jpg',
-        'images/projects/pdt-11.jpg',
-    ],
+                'gallery' => [],
                 'stats' => [
                     ['label' => 'Estimated Completion', 'value' => 'Q2 2026'],
                     ['label' => 'Square Feet', 'value' => '3,800'],
                     ['label' => 'Planning Approved', 'value' => 'Yes'],
                 ],
                 'image' => 'project-4.jpg',
-                'type' => 'upcoming',
+                'project_type' => 'upcoming',
+                'type' => 'Residential',
+                'place' => 'London, UK',
             ],
-
             'mornington-terrace' => [
                 'title' => 'Mornington Terrace',
                 'subtitle' => 'Bold new geometry above Camden rooftops.',
@@ -250,26 +166,16 @@ class ProjectController extends Controller
                     'Architect-led build focuses on geometry and eco-efficiency.',
                     'Features an open plan, roof terraces, and light wells.'
                 ],
-                    'gallery' => [
-        'images/projects/pdt-1.jpg',
-        'images/projects/pdt-2.jpg',
-        'images/projects/pdt-3.jpg',
-        'images/projects/pdt-4.jpg',
-        'images/projects/pdt-5.jpg',
-        'images/projects/pdt-6.jpg',
-        'images/projects/pdt-7.jpg',
-        'images/projects/pdt-8.jpg',
-        'images/projects/pdt-9.jpg',
-        'images/projects/pdt-10.jpg',
-        'images/projects/pdt-11.jpg',
-    ],
+                'gallery' => [],
                 'stats' => [
                     ['label' => 'Estimated Completion', 'value' => 'Q3 2026'],
                     ['label' => 'Square Feet', 'value' => '4,000'],
                     ['label' => 'Sustainability Rating', 'value' => 'BREEAM Excellent'],
                 ],
                 'image' => 'project-3.jpg',
-                'type' => 'upcoming',
+                'project_type' => 'upcoming',
+                'type' => 'Residential',
+                'place' => 'London, UK',
             ],
         ];
 
@@ -284,45 +190,56 @@ class ProjectController extends Controller
         $this->assignGallery('mornington-terrace', 5);
     }
 
-    /**
-     * Method to assign gallery images dynamically
-     */
     private function assignGallery(string $slug, int $count): void
     {
         $this->projects[$slug]['gallery'] = [];
-
         for ($i = 1; $i <= $count; $i++) {
             $this->projects[$slug]['gallery'][] = "images/projects/{$slug}/pdt-{$i}.jpg";
         }
     }
 
     /**
-     * Show the projects list page
+     * Show the projects list page, returning full listing data
      */
     public function index()
     {
         $completedProjects = collect($this->projects)
-            ->filter(fn($p) => $p['type'] === 'completed')
+            ->filter(fn($p) => $p['project_type'] === 'completed')
             ->map(fn($p, $slug) => [
                 'title' => $p['title'],
                 'slug' => $slug,
+                'subtitle' => $p['subtitle'] ?? '',
+                'desc' => $p['subtitle'] ?? '',
                 'image' => $p['image'] ?? 'default.jpg',
-            ]);
+                'place' => $p['place'] ?? '',
+                'type' => $p['type'] ?? '',
+                'gallery' => $p['gallery'] ?? [],
+                'stats' => $p['stats'] ?? [],
+                'description' => $p['description'] ?? [],
+                'hero' => $p['hero'] ?? '',
+                'feature' => $p['feature'] ?? '',
+            ])->values();
 
         $upcomingProjects = collect($this->projects)
-            ->filter(fn($p) => $p['type'] === 'upcoming')
+            ->filter(fn($p) => $p['project_type'] === 'upcoming')
             ->map(fn($p, $slug) => [
                 'title' => $p['title'],
                 'slug' => $slug,
+                'subtitle' => $p['subtitle'] ?? '',
+                'desc' => $p['subtitle'] ?? '',
                 'image' => $p['image'] ?? 'default.jpg',
-            ]);
+                'place' => $p['place'] ?? '',
+                'type' => $p['type'] ?? '',
+                'gallery' => $p['gallery'] ?? [],
+                'stats' => $p['stats'] ?? [],
+                'description' => $p['description'] ?? [],
+                'hero' => $p['hero'] ?? '',
+                'feature' => $p['feature'] ?? '',
+            ])->values();
 
         return view('pages.projects', compact('completedProjects', 'upcomingProjects'));
     }
 
-    /**
-     * Show a specific project detail page
-     */
     public function show(string $slug)
     {
         if (!isset($this->projects[$slug])) {

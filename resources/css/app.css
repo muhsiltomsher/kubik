@@ -2,140 +2,85 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Regular */
-@font-face {
-    font-family: 'Silk Serif TRIAL';
-    src: url('/fonts/SilkSerifTRIAL-Regular.woff2') format('woff2');
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
+
+@layer base {
+  html {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
 }
 
-/* Italic */
-@font-face {
-    font-family: 'Silk Serif TRIAL';
-    src: url('/fonts/SilkSerifTRIAL-Italic.woff2') format('woff2');
-    font-weight: 400;
-    font-style: italic;
-    font-display: swap;
-}
-
-/* Medium */
-@font-face {
-    font-family: 'Silk Serif TRIAL';
-    src: url('/fonts/SilkSerifTRIAL-Medium.woff2') format('woff2');
-    font-weight: 500;
-    font-style: normal;
-    font-display: swap;
-}
-
-/* Medium Italic */
-@font-face {
-    font-family: 'Silk Serif TRIAL';
-    src: url('/fonts/SilkSerifTRIAL-MediumItalic.woff2') format('woff2');
-    font-weight: 500;
-    font-style: italic;
-    font-display: swap;
-}
-
-/* Bold */
-@font-face {
-    font-family: 'Silk Serif TRIAL';
-    src: url('/fonts/SilkSerifTRIAL-Bold.woff2') format('woff2');
-    font-weight: 700;
-    font-style: normal;
-    font-display: swap;
-}
-
-/* Bold Italic */
-@font-face {
-    font-family: 'Silk Serif TRIAL';
-    src: url('/fonts/SilkSerifTRIAL-BoldItalic.woff2') format('woff2');
-    font-weight: 700;
-    font-style: italic;
-    font-display: swap;
-}
-
-/* Black (Ultra Bold) */
-@font-face {
-    font-family: 'Silk Serif TRIAL';
-    src: url('/fonts/SilkSerifTRIAL-Black.woff2') format('woff2');
-    font-weight: 900;
-    font-style: normal;
-    font-display: swap;
-}
-
-/* Black Italic */
-@font-face {
-    font-family: 'Silk Serif TRIAL';
-    src: url('/fonts/SilkSerifTRIAL-BlackItalic.woff2') format('woff2');
-    font-weight: 900;
-    font-style: italic;
-    font-display: swap;
-}
-
-/* Light */
-@font-face {
-    font-family: 'Silk Serif TRIAL';
-    src: url('/fonts/SilkSerifTRIAL-Light.woff2') format('woff2');
-    font-weight: 300;
-    font-style: normal;
-    font-display: swap;
-}
-
-/* Light Italic */
-@font-face {
-    font-family: 'Silk Serif TRIAL';
-    src: url('/fonts/SilkSerifTRIAL-LightItalic.woff2') format('woff2');
-    font-weight: 300;
-    font-style: italic;
-    font-display: swap;
-}
-
-
-@font-face {
-  font-family: 'Silk Serif TRIAL';
-  src: url('/fonts/SilkSerifTRIAL-Medium.woff2') format('woff2');
-  font-weight: 500;
-  font-style: normal;
-}
-
-
-
-
+/* Project Number Outline with Helvetica Neue */
 .project-number-outline {
-  font-family: var(--font-silk-serif);
-  font-size: 4rem; /* 60px */
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 4rem; /* 64px */
   font-weight: bold;
   -webkit-text-stroke: 1px #C5A26B;
+  text-stroke: 1px #C5A26B; /* fallback for older browsers */
   color: transparent;
-  text-stroke: 1px #C5A26B; /* fallback */
   line-height: 1;
 }
 
-
+/* Swiper Custom Bullets */
 .swiper-pagination-bullet.custom-bullet {
-    background-color:  #C5A26B; /* light primary */
-    width: 10px;
-    height: 10px;
-    margin: 0 4px;
-    border-radius: 9999px;
-    transition: background-color 0.3s ease;
+  background-color: #C5A26B;
+  width: 10px;
+  height: 10px;
+  margin: 0 4px;
+  border-radius: 9999px;
+  transition: background-color 0.3s ease;
 }
 
 .swiper-pagination-bullet-active {
-    background-color: #C5A26B; /* primary */
+  background-color: #C5A26B;
 }
 
 
 
 
 
+@layer utilities {
+  @keyframes loader-fill {
+    0% {
+      width: 0%;
+    }
+    100% {
+      width: 100%;
+    }
+  }
 
+  @keyframes logo-left {
+    0% {
+      opacity: 0;
+      transform: translateX(-100px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
 
+  @keyframes logo-right {
+    0% {
+      opacity: 0;
+      transform: translateX(100px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
 
-/* in your custom CSS or Tailwind config */
-.about-heading {
-  font-size: clamp(80px, 20vw, 220px);
-  line-height: 1;
+  .animate-loader-fill {
+    animation: loader-fill 2s ease-out forwards;
+  }
+
+  .animate-logo-left {
+    animation: logo-left 1.2s ease-out forwards;
+    animation-delay: 0.2s;
+  }
+
+  .animate-logo-right {
+    animation: logo-right 1.2s ease-out forwards;
+    animation-delay: 0.2s;
+  }
 }

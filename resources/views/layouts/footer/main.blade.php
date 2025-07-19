@@ -1,7 +1,7 @@
 <footer class="bg-black text-white text-sm pt-[100px] fade-anim">
   <x-container class="py-16">
     <!-- First Row: Logo Left, Social Right -->
-    <div class="flex flex-col lg:flex-row justify-between items-end gap-10 pb-14" data-fade="up">
+    <div class="flex flex-col lg:flex-row justify-between items-end gap-10 pb-14 footer-anim">
       <!-- Logo -->
       <div>
         <img src="/images/logo.png" alt="Kubik Construction" class="mb-6 max-w-[180px]">
@@ -22,25 +22,25 @@
     <!-- Second Row: Info and Newsletter -->
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
       <!-- Visit Us -->
-      <div class="space-y-1 text-xs" data-fade="up">
-        <p class="uppercase text-gray-400">Visit us</p>
+      <div class="footer-anim">
+        <p class="uppercase text-gray-400 text-xs mb-1">Visit us</p>
         <p>Kubik Construction, 72<br>First Avenue, Acton<br>London, W3 7JW</p>
       </div>
 
       <!-- Call Us -->
-      <div data-fade="up" data-delay="0.1">
-        <p class="uppercase text-gray-400 mb-1">Call us</p>
+      <div class="footer-anim">
+        <p class="uppercase text-gray-400 text-xs mb-1">Call us</p>
         <p class="text-base">020 3903 9410</p>
       </div>
 
       <!-- Mail Us -->
-      <div data-fade="up" data-delay="0.2">
-        <p class="uppercase text-gray-400 mb-1">Mail us</p>
+      <div class="footer-anim">
+        <p class="uppercase text-gray-400 text-xs mb-1">Mail us</p>
         <p class="text-base">info@kubikconstruction.co.uk</p>
       </div>
 
       <!-- Newsletter -->
-      <div data-fade="up" data-delay="0.3">
+      <div class="footer-anim">
         <p class="uppercase text-white/60 mb-2 text-sm tracking-wide">Insights from inside the Kubik</p>
         <form class="flex flex-col gap-3 mt-2 w-full max-w-sm">
           <input 

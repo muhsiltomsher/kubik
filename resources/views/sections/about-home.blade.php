@@ -1,5 +1,5 @@
 {{-- About Us Section on Homepage --}}
-<section id="about-home" class="relative bg-black text-white overflow-hidden">
+<section id="about-home" class="relative bg-black text-white  -mt-[5px]">
     <x-container>
         <div class="flex flex-col md:flex-row items-start py-20 gap-5">
             <!-- Logo & About Text Block -->
@@ -11,7 +11,7 @@
                         class="w-full h-full object-contain logo-image" 
                         loading="lazy"
                     />
-                    <span class="mt-[70px] text-xs tracking-widest uppercase text-white/80 text-center md:text-left block font-sora logo-text">
+                    <span class="mt-[70px] text-xs font-light tracking-widest uppercase text-white/80 text-center md:text-left block font-sora logo-text">
                         About Us
                     </span>
                 </div>
@@ -20,7 +20,7 @@
             <!-- Main Content -->
             <div class="w-full md:w-[90%] flex items-start pt-[115px]">
                 <div class="mx-auto md:mx-0 text-center md:text-left">
-                    <h2 class="about-home-heading font-silk-serif font-medium text-3xl md:text-[50px] !leading-[55px] mb-6 space-y-4">
+                    <h2 class="about-home-heading font-sans font-light text-3xl md:text-[50px] !leading-[55px] space-y-4">
                         <div class="overflow-hidden">
                             <p class="about-home-line">
                                 Since 2005, <span class="text-[#F8B26A]">Kubik</span> Construction has delivered timeless design and flawless execution.

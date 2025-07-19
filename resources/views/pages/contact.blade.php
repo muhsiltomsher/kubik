@@ -10,36 +10,36 @@
 ])
 
 {{-- Contact Section --}}
-<section class="bg-black text-white py-24 border-b border-secondary">
+<section class="bg-black text-white py-24 border-b border-secondary font-light">
     <x-container>
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
 
             {{-- Contact Info --}}
             <div id="contact-info" class="relative bg-[#151515] p-10 shadow-lg border border-white/10">
-                <h2 class="text-3xl md:text-4xl font-silk-serif font-semibold mb-6 text-primary">Get in Touch</h2>
+                <h2 class="text-3xl md:text-4xl font-sans text-primary mb-6">Get in Touch</h2>
 
-                <p class="text-white/70 mb-6 max-w-lg">
+                <p class="text-white/70 mb-6 max-w-lg leading-relaxed">
                     Reach out to our team for any inquiries or to arrange a callback. We’re here to support your next project.
                 </p>
 
-                <div class="space-y-4 text-sm text-white/80 mb-8">
-                    <p><strong class="text-white">Office:</strong>
+                <div class="space-y-4 text-sm text-white/80 mb-10 leading-relaxed">
+                    <p><strong class="text-white font-normal">Office:</strong>
                         <a href="tel:+442039039410" class="hover:text-primary transition">020 3903 9410</a>
                     </p>
-                    <p><strong class="text-white">Greg:</strong>
+                    <p><strong class="text-white font-normal">Greg:</strong>
                         <a href="tel:+447587655379" class="hover:text-primary transition">07587 655 379</a> /
                         <a href="tel:+447916284814" class="hover:text-primary transition">07916 284 814</a>
                     </p>
-                    <p><strong class="text-white">James:</strong>
+                    <p><strong class="text-white font-normal">James:</strong>
                         <a href="tel:+447587655378" class="hover:text-primary transition">07587 655 378</a>
                     </p>
-                    <p><strong class="text-white">Milena:</strong>
+                    <p><strong class="text-white font-normal">Milena:</strong>
                         <a href="tel:+447950345542" class="hover:text-primary transition">07950 345 542</a>
                     </p>
-                    <p><strong class="text-white">Email:</strong>
+                    <p><strong class="text-white font-normal">Email:</strong>
                         <a href="mailto:info@kubik.ae" class="hover:text-primary transition">info@kubik.ae</a>
                     </p>
-                    <p><strong class="text-white">Address:</strong><br>
+                    <p><strong class="text-white font-normal">Address:</strong><br>
                         Kubik Construction<br>
                         72 First Avenue,<br>
                         Acton, London<br>
@@ -71,30 +71,35 @@
 
             {{-- Callback Request Form --}}
             <form id="contact-form" class="bg-[#151515] p-8 rounded space-y-6">
-                <h2 class="text-xl font-semibold text-white mb-4">Request a Callback</h2>
+                <h2 class="text-xl text-white mb-4">Request a Callback</h2>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
                         <label class="block text-sm mb-1">Full Name*</label>
-                        <input type="text" name="name" placeholder="Your full name" class="w-full bg-transparent border border-white/30 text-white py-3 px-4 placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-primary" />
+                        <input type="text" name="name" placeholder="Your full name"
+                               class="w-full bg-transparent border border-white/30 text-white py-3 px-4 placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-primary" />
                     </div>
                     <div>
                         <label class="block text-sm mb-1">Email*</label>
-                        <input type="email" name="email" placeholder="Your email address" class="w-full bg-transparent border border-white/30 text-white py-3 px-4 placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-primary" />
+                        <input type="email" name="email" placeholder="Your email address"
+                               class="w-full bg-transparent border border-white/30 text-white py-3 px-4 placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-primary" />
                     </div>
                 </div>
 
                 <div>
                     <label class="block text-sm mb-1">Telephone*</label>
-                    <input type="tel" name="phone" placeholder="Your phone number" class="w-full bg-transparent border border-white/30 text-white py-3 px-4 placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-primary" />
+                    <input type="tel" name="phone" placeholder="Your phone number"
+                           class="w-full bg-transparent border border-white/30 text-white py-3 px-4 placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-primary" />
                 </div>
 
                 <div>
                     <label class="block text-sm mb-1">Message</label>
-                    <textarea name="message" rows="5" placeholder="Your message..." class="w-full bg-transparent border border-white/30 text-white py-3 px-4 placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-primary"></textarea>
+                    <textarea name="message" rows="5" placeholder="Your message..."
+                              class="w-full bg-transparent border border-white/30 text-white py-3 px-4 placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-primary"></textarea>
                 </div>
 
-                <button type="submit" class="w-full bg-secondary text-white font-semibold py-3 px-6 hover:bg-secondary/90 transition rounded">
+                <button type="submit"
+                        class="w-full bg-secondary text-white font-semibold py-3 px-6 hover:bg-secondary/90 transition rounded">
                     Call Me Back
                 </button>
             </form>
@@ -102,19 +107,11 @@
     </x-container>
 </section>
 
-{{-- Map Section --}}
-<section class="relative h-[400px]">
-    <iframe
-        class="absolute inset-0 w-full h-full"
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19887.29807307437!2d-0.2782999532930984!3d51.51183333434573!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487610f2c97ea35d%3A0x573d5b5ea1b99f33!2s72%20First%20Ave%2C%20London%20W3%207JW%2C%20UK!5e0!3m2!1sen!2suk!4v1626169999999!5m2!1sen!2suk"
-        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-    </iframe>
-</section>
-
-
+{{-- Animations --}}
 <script>
     document.addEventListener('DOMContentLoaded', () => {
-   
+        gsap.registerPlugin(ScrollTrigger);
+
         gsap.from("#contact-info", {
             scrollTrigger: {
                 trigger: "#contact-info",

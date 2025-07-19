@@ -7,31 +7,44 @@
 
     <title>@yield('title', config('app.name', 'Kubik'))</title>
 
-    <!-- Fonts: Sora only -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <!-- Helvetica Neue (System font stack fallback) -->
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        }
+    </style>
 
     <!-- Tailwind CSS + JS via Vite -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+    <script src="https://assets.codepen.io/16327/DrawSVGPlugin3.min.js"></script>
 </head>
-<body class="font-sora antialiased text-gray-900 bg-white scroll-smooth">
+<body class="antialiased text-gray-900 bg-black">
 
-    {{-- Header --}}
-    @include('layouts.header.main')
+    {{-- 🔄 Site Loader --}}
+    @include('components.loader')
 
-    {{-- Page Content --}}
-     <main class="-mt-[100px]">
-        @yield('content')
-    </main>
+    {{-- ✅ ScrollSmoother Required Structure --}}
+    <div id="smooth-wrapper">
+        <div id="smooth-content">
 
-    {{-- Footer --}}
-    @include('layouts.footer.main')
+            {{-- Header --}}
+            @include('layouts.header.main')
 
+            {{-- Page Content --}}
+            <main class="-mt-[100px]">
+                @yield('content')
+            </main>
 
+            {{-- Footer --}}
+            @include('layouts.footer.main')
+
+        </div>
+    </div>
 
     {{-- Optional Extra Scripts --}}
     @stack('scripts')
 
+    {{-- 🔁 GSAP Menu Alpine Integration --}}
     <script>
         function gsapMenu() {
             return {
@@ -48,7 +61,7 @@
                             .to(menu, {
                                 duration: 1,
                                 opacity: 1,
-                                height: '60vh', // adjust as needed
+                                height: '60vh',
                                 ease: 'expo.inOut'
                             })
                             .from(links, {
