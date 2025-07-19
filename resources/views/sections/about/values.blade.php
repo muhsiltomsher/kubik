@@ -27,10 +27,10 @@
                     @foreach ($values as $index => $item)
                         <div class="group space-y-4 text-left cursor-pointer transition-all duration-300" data-animate="fade-up" >
                             {{-- SVG Icon --}}
-                            <div class="w-20 h-20 svg-icon-wrapper transition-transform duration-300 group-hover:scale-105" data-icon>
-                 <div class="w-20 h-20  svg-icon-wrapper transition-transform duration-300 group-hover:scale-105" data-icon>
+                            <div class="w-20 h-20  transition-transform duration-300 group-hover:scale-105" data-icon>
+<div class="w-20 h-20 " data-icon>
     <svg
-        class="w-full h-full stroke-white fill-none group-hover:stroke-[#f8b26a] transition-colors duration-700"
+        class="w-full h-full stroke-white fill-none"
         stroke-width="2"
         viewBox="0 0 512 512"
         xmlns="http://www.w3.org/2000/svg"
@@ -39,6 +39,7 @@
         <path d="M256.04 457.618a8.06 8.06 0 0 0-8.06 8.07v32.26a8.06 8.06 0 1 0 16.12 0v-32.26a8.06 8.06 0 0 0-8.06-8.07zM319.45 442.468c-6.522-8.425-19.052.656-13.05 9.48l19 26.09a8.06 8.06 0 1 0 13-9.49zM381.24 401.108l-30.67-10c-10.236-2.992-15.049 11.729-5 15.35l30.68 9.95a7.913 7.913 0 0 0 2.49.39c9.115-.071 11.127-12.86 2.48-15.73zM161.51 391.148l-30.67 10c-8.651 2.872-6.631 15.66 2.48 15.73a7.918 7.918 0 0 0 2.49-.39l30.68-9.95c10.034-3.61 5.254-18.342-5-15.35zM203.9 440.688a8.051 8.051 0 0 0-11.27 1.78l-19 26.08a8.06 8.06 0 1 0 13 9.49l19-26.09a8.06 8.06 0 0 0-1.73-11.26z" />
     </svg>
 </div>
+
 
                             </div>
 

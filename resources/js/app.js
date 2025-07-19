@@ -34,7 +34,7 @@ Alpine.start();
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import ScrollSmoother from 'gsap/ScrollSmoother';
-gsap.registerPlugin(ScrollTrigger, ScrollSmoother, DrawSVGPlugin);
+gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 window.gsap = gsap;
 
 // ---------------------------------------------
@@ -817,8 +817,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-
-
 document.addEventListener('DOMContentLoaded', () => {
     // Fade-up animation for all data-animate items
     document.querySelectorAll('[data-animate="fade-up"]').forEach((el) => {
@@ -842,46 +840,8 @@ document.addEventListener('DOMContentLoaded', () => {
         );
     });
 
-    // SVG draw animation (scroll + hover)
-    document.querySelectorAll('.svg-icon-wrapper').forEach((wrapper) => {
-        const svgEl = wrapper.querySelector('svg');
-        const paths = svgEl.querySelectorAll('path');
-
-        // Initial state
-        paths.forEach(path => gsap.set(path, { drawSVG: '0% 0%' }));
-
-        // On scroll draw
-        gsap.to(paths, {
-            drawSVG: '0% 100%',
-            duration: 3,
-            ease: 'power4.out',
-            stagger: 0.1,
-            scrollTrigger: {
-                trigger: wrapper,
-                start: 'top 95%',
-                toggleActions: 'play none none reverse',
-            }
-        });
-
-        // Hover replay (entire .group hover)
-        const group = wrapper.closest('.group');
-        if (group) {
-            group.addEventListener('mouseenter', () => {
-                gsap.killTweensOf(paths); // Prevent multiple triggers
-                gsap.fromTo(paths,
-                    { drawSVG: '0% 0%' },
-                    {
-                        drawSVG: '0% 100%',
-                        duration: 2.2,
-                        ease: 'power2.out',
-                        stagger: 0.08
-                    }
-                );
-            });
-        }
-    });
+    // SVG draw animation removed
 });
-
 
 
 
